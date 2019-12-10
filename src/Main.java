@@ -1,13 +1,14 @@
 import java.sql.Connection;
 import java.sql.SQLException;
 import br.com.fti.projetologin.conexao.CriarConexao;
-import br.com.fti.projetologin.login.Login;
-import br.com.fti.projetologin.login.LoginDAO;
-import br.com.fti.projetologin.pessoa.Pessoa;
-import br.com.fti.projetologin.pessoa.PessoaDAO;
+import br.com.fti.projetologin.dao.LoginDAO;
+import br.com.fti.projetologin.dao.PessoaDAO;
+import br.com.fti.projetologin.models.Login;
+import br.com.fti.projetologin.models.Pessoa;
 
-/*
- * Classe Main apenas para teste da conexão. Ela poderá ser apagada depois.
+/**
+ * Classe Main apenas para teste da conexão com o banco de dados. Ela poderá ser apagada depois.
+ * 
  */
 public class Main {
 	

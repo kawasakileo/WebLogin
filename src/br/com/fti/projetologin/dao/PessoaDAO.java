@@ -1,10 +1,11 @@
-package br.com.fti.projetologin.pessoa;
+package br.com.fti.projetologin.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import br.com.fti.projetologin.conexao.CriarConexao;
+import br.com.fti.projetologin.models.Pessoa;
 
 /**
  * Classe DAO (Data Access Object) para o objeto Pessoa.
@@ -29,8 +30,7 @@ public class PessoaDAO {
 		ps.setString(1, pessoa.getNome());
 		ps.setString(2, pessoa.getSobrenome());
 		ps.setString(3, pessoa.getCpf());
-		ps.setString(4, pessoa.getCep());
-			
+		ps.setString(4, pessoa.getCep());	
 		ps.executeUpdate();		
 		
 		ps.close();
@@ -40,37 +40,31 @@ public class PessoaDAO {
 	public void apagarTodos(Pessoa pessoa) throws SQLException {
 		String sql = "delete from pessoa where id is not null";
 		
-		try {
-			PreparedStatement ps = conn.prepareStatement(sql);
-			ps.execute();
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			conn.close();
-		}
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ps.execute();
+		
+		ps.close();
+		conn.close();
 	}
 	
 	public boolean selecionar(Pessoa pessoa) throws SQLException, ClassNotFoundException {
 		String sql = "select * from pessoa where nome like ? and sobrenome like ? and cpf like ? and cep like ?";
 		boolean aux = false;
 
-		try {
-			conn = CriarConexao.getConexao();
-			PreparedStatement ps = conn.prepareStatement(sql);
-			ps.setString(1, "%" + pessoa.getNome() + "%");
-			ps.setString(2, "%" + pessoa.getSobrenome() + "%");
-			ps.setString(3, "%" + pessoa.getCpf() + "%");
-			ps.setString(4, "%" + pessoa.getCep() + "%");
-			ResultSet rs = ps.executeQuery();
+		conn = CriarConexao.getConexao();
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ps.setString(1, "%" + pessoa.getNome() + "%");
+		ps.setString(2, "%" + pessoa.getSobrenome() + "%");
+		ps.setString(3, "%" + pessoa.getCpf() + "%");
+		ps.setString(4, "%" + pessoa.getCep() + "%");
+		ResultSet rs = ps.executeQuery();
 			
-			if (rs.next()) {
+		if (rs.next()) {
 				aux = true;
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			conn.close();
 		}
+		ps.close();
+		conn.close();
+		
 		return aux;
 	}
 }

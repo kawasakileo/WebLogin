@@ -1,13 +1,35 @@
-package br.com.fti.projetologin.pessoa;
+package br.com.fti.projetologin.models;
 
+/**
+ * Classe padrão para o objeto Login.
+ * 
+ */
 public class Pessoa {
+	private int id;
 	private String nome;
 	private String sobrenome;
 	private String cpf;
 	private String cep;
 	
 	public Pessoa() {
-		
+		super();
+	}
+	
+	public Pessoa(int id, String nome, String sobrenome, String cpf, String cep) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.cpf = cpf;
+		this.cep = cep;
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getNome() {

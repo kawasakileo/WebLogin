@@ -1,4 +1,4 @@
-package br.com.fti.projetologin.servlets;
+package br.com.fti.projetologin.controllers;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -9,11 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import br.com.fti.projetologin.conexao.CriarConexao;
-import br.com.fti.projetologin.pessoa.Pessoa;
-import br.com.fti.projetologin.pessoa.PessoaDAO;
+import br.com.fti.projetologin.dao.PessoaDAO;
+import br.com.fti.projetologin.models.Pessoa;
 
 /**
- * Servlet implementation class CadastroPessoaServlet
+ * Classe para a implementação do Servlet para o cadastro de pessoas.
+ * 
  */
 @WebServlet("/CadastroPessoa")
 public class CadastroPessoaServlet extends HttpServlet {

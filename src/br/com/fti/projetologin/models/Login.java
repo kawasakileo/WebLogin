@@ -1,7 +1,8 @@
-package br.com.fti.projetologin.login;
+package br.com.fti.projetologin.models;
 
-/*
+/**
  * Classe padrão para o objeto Login.
+ * 
  */
 public class Login {
 	private int id;

@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Cadastro de Usuário</title>
-<!-- script java JS -->
+<!-- script JS -->
 <script type="text/javascript" src="js/validarCadastro.js"> </script>
 <!-- link com o CSS -->
 <link rel="stylesheet" href="css/estilos.css"> 
+<title>Cadastro de Usuário</title>
 </head>
 <body>
 	<div id="cabecalho" align="center">

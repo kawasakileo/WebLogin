@@ -5,8 +5,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Login Inválido</title>
-<!-- script JS -->
-<script type="text/javascript" src="js/validarLogin.js"> </script>
 <!-- link com o CSS -->
 <link rel="stylesheet" href="css/estilos.css"> 
 </head>

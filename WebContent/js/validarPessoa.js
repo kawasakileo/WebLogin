@@ -1,3 +1,7 @@
+/**
+ * Método para a validação dos campos de cadastro de pessoa.
+ * 
+ */
 function validarPessoa() {
 	if (document.formPessoa.textNome.value == "") {
 		alert("Digite o nome.");

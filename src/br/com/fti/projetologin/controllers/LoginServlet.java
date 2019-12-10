@@ -1,4 +1,4 @@
-package br.com.fti.projetologin.servlets;
+package br.com.fti.projetologin.controllers;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -8,10 +8,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import br.com.fti.projetologin.login.LoginDAO;
+
+import br.com.fti.projetologin.dao.LoginDAO;
 
 /**
- * Classe para a implementação do Servlet para o cadastro de logins.
+ * Classe para a implementação do Servlet para a validação de logins.
+ * 
  */
 @WebServlet("/Login")
 public class LoginServlet extends HttpServlet {

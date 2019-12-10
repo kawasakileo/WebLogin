@@ -4,8 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/*
- * Classe que define os parâmetros do banco da dodos.
+/**
+ * Classe que define os parâmetros da conexão com o banco da dodos.
+ * 
  */
 public class CriarConexao {
 	
