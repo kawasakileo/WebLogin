@@ -29,7 +29,7 @@
 				</tr>
 				<tr>
 					<td colspan="2" align="right">
-						<button class="button" type="submit" onclick="validarLogin()">Login</button>
+						<button id="login" class="button" type="submit" onclick="validarLogin()">Login</button>
 					</td>
 				</tr>
 			</table>
