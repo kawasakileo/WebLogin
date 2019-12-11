@@ -17,11 +17,11 @@ public class Main {
 		
 		Login login = new Login();
 		Pessoa pessoa = new Pessoa();
-		login.setUsuario("teste");
-		login.setSenha("123");
+		// login.setUsuario("teste");
+		// login.setSenha("123");
 		
 		LoginDAO loginDao = new LoginDAO(conn);
-		loginDao.apagarTodos(login); 
+		// loginDao.apagarTodos(login); 
 		
 		PessoaDAO pessoaDao = new PessoaDAO(conn);
 		pessoaDao.apagarTodos(pessoa);

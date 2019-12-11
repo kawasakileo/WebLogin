@@ -21,15 +21,16 @@
 			<table>
 				<tr>
 					<td>Usuário:</td>
-					<td><input type="text" name="textUsuario"></td>
+					<td><input type="text" name="textUsuario" required></td>
 				</tr>
 				<tr>
 					<td>Senha:</td>
-					<td><input type="password" name="textSenha"></td>
+					<td><input type="password" name="textSenha" required></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="right">
-						<button id="login" class="button" type="submit" onclick="validarLogin()">Login</button>
+						<button id="login" class="button" type="submit">Login</button>
+						<!-- <button id="login" class="button" type="submit" onclick="validarLogin()">Login</button> -->
 					</td>
 				</tr>
 			</table>

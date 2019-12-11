@@ -50,7 +50,8 @@ public class CadastroLoginServlet extends HttpServlet {
 		String senhaUsuario = request.getParameter("textSenhaCadastro");
 		
 		Connection conn = CriarConexao.getConexao();
-			
+		
+		// else não é executado, pois os campos do form estão como "required".
 		Login login = new Login();
 		if(!nomeUsuario.equals("") && !senhaUsuario.equals("")) {
 			login.setUsuario(nomeUsuario);

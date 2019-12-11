@@ -40,6 +40,7 @@
 					<td colspan="2" align="right">
 						<button id="limparPessoa" class="button" type="reset">Limpar</button>
 						<button id="cadastrarPessoa" class="button" type="submit">Cadastrar</button>
+						<!-- <button id="cadastrarPessoa" class="button" type="submit" onclick="validaPessoa()">Cadastrar</button> -->
 					</td>
 				</tr>
 			</table>

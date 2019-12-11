@@ -8,7 +8,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import br.com.fti.projetologin.dao.LoginDAO;
 
 /**
@@ -37,7 +36,8 @@ public class LoginServlet extends HttpServlet {
     	
     	String nomeUsuario = request.getParameter("textUsuario");
 		String senhaUsuario = request.getParameter("textSenha");
-		
+			
+		// primeiro if não é executado, pois os campos do formulário estão como "required".
 		if((nomeUsuario.equals("") || senhaUsuario.equals("")) || 
 		  (!nomeUsuario.equals("") && senhaUsuario.equals("")) ||
 		  (nomeUsuario.equals("") && !senhaUsuario.equals(""))) {

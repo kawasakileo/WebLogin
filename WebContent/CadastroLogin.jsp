@@ -21,15 +21,16 @@
 			<table>
 				<tr>
 					<td>Usuário:</td>
-					<td><input type="text" name="textUsuarioCadastro"></td>
+					<td><input type="text" name="textUsuarioCadastro" required></td>
 				</tr>
 				<tr>
 					<td>Senha:</td>
-					<td><input type="password" name="textSenhaCadastro"></td>
+					<td><input type="password" name="textSenhaCadastro" required></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="right">
-						<button id="cadastrarLogin" class="button" type="submit" onclick="validarCadastro()">Cadastrar</button>
+						<button id="cadastrarLogin" class="button" type="submit">Cadastrar</button>
+						<!-- <button id="cadastrarLogin" class="button" type="submit" onclick="validarCadastro()">Cadastrar</button> -->
 					</td>
 				</tr>
 			</table>
