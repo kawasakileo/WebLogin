@@ -4,24 +4,23 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<title>Cadastro Inválido</title>
 <!-- link com o CSS -->
 <link rel="stylesheet" href="css/estilos.css"> 
-<title>Pessoa Cadastrada</title>
 </head>
 <body>
 	<div id="cabecalho" align="center">
-		<img alt="fti" src="./images/fti.png" width="150" height="90">
-		<hr>
-		<h1>Cadastrado efetuado com sucesso.</h1>
+		<p>Erro: CPF inválido.</p>
 	</div>
-	<div id="corpo" align="center">	
-		<form>
-			<a href="CadastroPessoa.jsp">Voltar</a>
-		</form>
+	<div id="corpo" align="center">
+		<hr>
+		<img alt="erro" src="./images/erro1.png" width="150" height="155">
+		<br></br>
+		<a href="CadastroPessoa.jsp">Tentar novamente</a>
 	</div>
 </body>
 <footer>
-	<div class="footer" align="center">
+	<div class= "footer" align="center">
 		<p>Autor: Leonardo Kawasaki</p>
 	</div>
 </footer>

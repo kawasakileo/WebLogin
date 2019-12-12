@@ -12,7 +12,7 @@
 	<div id="cabecalho" align="center">
 		<img alt="fti" src="./images/fti.png" width="150" height="90">
 		<hr>
-		<h1>Usuário cadastrado.</h1>
+		<h1>Cadastrado efetuado com sucesso.</h1>
 	</div>
 	<div id="corpo" align="center">	
 		<form>
