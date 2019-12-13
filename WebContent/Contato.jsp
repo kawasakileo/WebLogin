@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <!-- link com o CSS -->
 <link rel="stylesheet" href="css/estilos.css"> 
-<title>Menu Inicial</title>
+<title>Sobre</title>
 </head>
 <body>
 	<div id="cabecalho" align="center">
@@ -26,11 +26,9 @@
 		<a href="Contato.jsp">Contato</a>
 	</div>
 	<div id="corpo" align="center">
-		<h1>Bem vindo!</h1>
-		<br>
-		<a href="Login.jsp">
-			<img border="0" alt="Sair" src="./images/logout.png" width="30" height="30">
-		</a>	
+		<h3>Informações para contato:</h3>
+		<p>Email: leonardokws@gmail.com</p>
+		<p>Telefone: (43)99957-1716</p>
 	</div>
 </body>
 <footer>

@@ -8,7 +8,7 @@
 <script type="text/javascript" src="js/validarPessoa.js"> </script>
 <!-- link com o CSS -->
 <link rel="stylesheet" href="css/estilos.css"> 
-<title>Logado</title>
+<title>Cadastrar</title>
 </head>
 <body>
 	<div id="cabecalho" align="center">
@@ -56,15 +56,11 @@
 				</tr>
 			</table>
 		</form>
-		<form>
-			<br>
-			<a href="Login.jsp">Sair</a>
-		</form>
 	</div>
 </body>
 <footer>
 	<div class="footer" align="center">
-		<p>Autor: Leonardo Kawasaki</p>
+		<p> © Copyright <strong>Leonardo Kawasaki</strong>. Todos os direitos reservados.</p>
 	</div>
 </footer>
 </html>

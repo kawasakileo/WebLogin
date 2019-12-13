@@ -42,8 +42,8 @@
 	</div>
 </body>
 <footer>
-	<div class= "footer" align="center">
-		<p>Autor: Leonardo Kawasaki</p>
+	<div class="footer" align="center">
+		<p> © Copyright <strong>Leonardo Kawasaki</strong>. Todos os direitos reservados.</p>
 	</div>
 </footer>
 </html>
