@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +27,26 @@
 		<a href="Contato.jsp">Contato</a>
 	</div>
 	<div id="corpo" align="center">
-		<h3>Pessoas cadastradas:</h3>
+		<form action="VisualizaPessoa" method="post" name="visualizaPessoas">
+			<table>
+				<tr>
+					<th>ID</th>
+					<th>Nome</th>
+					<th>Sobrenome</th>
+					<th>CEP</th>
+					<th>CPF</th>
+				</tr>
+				<c:forEach var="pessoas" items="${pessoas}">
+					<tr>
+						<td>${pessoa.getId()}</td>
+						<td>${pessoa.getNome()}</td>
+						<td>${pessoa.getSobrenome()}</td>
+						<td>${pessoa.getCpf()}</td>
+						<td>${pessoa.getCep()}</td>
+					</tr>
+				</c:forEach>
+			</table>
+		</form>
 	</div>
 </body>
 <footer>
