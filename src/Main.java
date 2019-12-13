@@ -15,12 +15,12 @@ public class Main {
 	public static void main(String[] args) throws SQLException, ClassNotFoundException {
 		Connection conn = CriarConexao.getConexao();
 		
-		Login login = new Login();
+		// Login login = new Login();
 		Pessoa pessoa = new Pessoa();
 		// login.setUsuario("teste");
 		// login.setSenha("123");
 		
-		LoginDAO loginDao = new LoginDAO(conn);
+		// LoginDAO loginDao = new LoginDAO(conn);
 		// loginDao.apagarTodos(login); 
 		
 		PessoaDAO pessoaDao = new PessoaDAO(conn);

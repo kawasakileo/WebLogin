@@ -47,7 +47,7 @@ public class LoginServlet extends HttpServlet {
     		RequestDispatcher rd = request.getRequestDispatcher("ErroUsuarioOuSenha.jsp");
 			rd.forward(request, response);
 		} else if(loginDao.selecionar(nomeUsuario, senhaUsuario)) {
-			RequestDispatcher rd = request.getRequestDispatcher("CadastroPessoa.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("MenuInicial.jsp");
 	    	rd.forward(request, response);
 		}
 	}

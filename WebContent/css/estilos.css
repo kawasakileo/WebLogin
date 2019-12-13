@@ -1,57 +1,122 @@
 @charset "ISO-8859-1";
 
-#cabecalho , #corpo {
+#cabecalho, #corpo {
 	font-family: sans-serif;
 	font-size: 15px;
 }
 
-#login , #cadastrarLogin , #cadastrarPessoa {
+#login, #cadastrarLogin, #cadastrarPessoa {
 	background-color: #4CAF50;
 	font-family: sans-serif;
 	color: white;
 	border: none;
 	text-decoration: none;
-  	display: inline-block;
-  	font-size: 15px;
-  	cursor: pointer;
- 	float: right;
- 	border-radius: 3px;
+	display: inline-block;
+	font-size: 15px;
+	cursor: pointer;
+	float: right;
+	border-radius: 3px;
 }
 
 #login:hover {
-  background-color: #367C39;
+	background-color: #367C39;
 }
 
 #cadastrarLogin:hover {
-  background-color: #367C39;
+	background-color: #367C39;
 }
 
 #cadastrarPessoa:hover {
-  background-color: #367C39;
+	background-color: #367C39;
 }
 
 #limparPessoa {
-	background-color: #F30000;
+	background-color: #ED3237;
 	font-family: sans-serif;
 	color: white;
 	border: none;
 	text-decoration: none;
-  	display: inline-block;
-  	font-size: 15px;
-  	cursor: pointer;
-  	border-radius: 3px;
-  	margin-right: 1px;
+	display: inline-block;
+	font-size: 15px;
+	cursor: pointer;
+	border-radius: 3px;
+	margin-right: 1px;
 }
 
 #limparPessoa:hover {
-  	background-color: #CC0000;
+	background-color: #CC0000;
+}
+
+.navbar {
+	font-family: sans-serif;
+	font-size: 15px;
+	overflow: hidden;
+	background-color: #373435;
+	justify-content: center;
+	display: flex;
+}
+
+.navbar a {
+	float: left;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+
+.dropdown .dropbtn {
+	font-size: 16px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+	background-color: #ED3237;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:hover {
+	background-color: #AFAFAF;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
 }
 
 .footer {
 	background-color: #AFAFAF;
+	color: black;
 	font-family: sans-serif;
 	font-size: 12px;
 	position: absolute;
-    bottom: 0;
-    width: 99%;
+	bottom: 0;
+	width: 99%;
 }

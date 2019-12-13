@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <!-- link com o CSS -->
 <link rel="stylesheet" href="css/estilos.css"> 
-<title>Pessoa Cadastrada</title>
+<title>Menu Inicial</title>
 </head>
 <body>
 	<div id="cabecalho" align="center">
@@ -25,11 +25,8 @@
 		<a href="Sobre.jsp">Sobre</a>
 		<a href="Contato.jsp">Contato</a>
 	</div>
-	<div id="corpo" align="center">	
-		<form>
-			<h1>Cadastrado efetuado com sucesso.</h1>
-			<a href="CadastroPessoa.jsp">Voltar</a>
-		</form>
+	<div id="corpo" align="center">
+		<h1>Bem vindo!</h1>
 	</div>
 </body>
 <footer>
