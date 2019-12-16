@@ -11,22 +11,25 @@ import br.com.fti.projetologin.dao.PessoaDAO;
 import br.com.fti.projetologin.models.Pessoa;
 
 /**
- * Servlet implementation class VisualizaPessoaServlet
+ * Classe para a implementação do Servlet para a visualização das pessoas cadastradas.
+ * 
  */
-@WebServlet("/VisualizaPessoa")
+@WebServlet("/VisualizaPessoas")
 public class VisualizaPessoaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	
     public VisualizaPessoaServlet() {
         super();
     }
-
+    
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PessoaDAO pessoaDao = new PessoaDAO();
-	    ArrayList<Pessoa> pessoas = pessoaDao.selecionaPessoas();
-
-	    request.setAttribute("pessoas", pessoas);
-
-	    request.getRequestDispatcher("/PessoasCadastradas.jsp").forward(request, response);
+		PessoaDAO pessoaDAO = new PessoaDAO();
+		try {
+			ArrayList<Pessoa> pessoas = pessoaDAO.selecionarPessoas();
+			request.setAttribute("pessoas", pessoas);
+			request.getRequestDispatcher("PessoasCadastradas.jsp").forward(request, response);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

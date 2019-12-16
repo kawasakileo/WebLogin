@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- script JS -->
 <script type="text/javascript" src="js/validarLogin.js"> </script>
 <!-- link com o CSS -->
-<link rel="stylesheet" href="css/estilos.css"> 
+<link rel="stylesheet" href="css/style.css"> 
 <title>Login</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
 		<form action="Login" method="post" name="formLogin">
 			<table>
 				<tr>
-					<td>Usuário:</td>
+					<td>UsuÃ¡rio:</td>
 					<td><input type="text" name="textUsuario" required></td>
 				</tr>
 				<tr>
@@ -36,14 +36,14 @@
 			</table>
 		</form>
 		<form>
-			<p>Deseja cadastrar um usuário?</p>
-			<a href="CadastroLogin.jsp">Cadastrar usuário</a>
+			<p>Deseja cadastrar um usuÃ¡rio?</p>
+			<a href="CadastroLogin.jsp">Cadastrar usuÃ¡rio</a>
 		</form>
 	</div>
 </body>
 <footer>
 	<div class="footer" align="center">
-		<p> © Copyright <strong>Leonardo Kawasaki</strong>. Todos os direitos reservados.</p>
+		<p> Â© Copyright <strong>Leonardo Kawasaki</strong>. Todos os direitos reservados.</p>
 	</div>
 </footer>
 </html>

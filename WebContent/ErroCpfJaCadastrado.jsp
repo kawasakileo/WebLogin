@@ -1,16 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Cadastro Inválido</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Cadastro InvÃ¡lido</title>
 <!-- link com o CSS -->
-<link rel="stylesheet" href="css/estilos.css"> 
+<link rel="stylesheet" href="css/style.css"> 
 </head>
 <body>
 	<div id="cabecalho" align="center">
-		<p>Erro: CPF já cadastrado.</p>
+		<p>Erro: CPF jÃ¡ cadastrado.</p>
 	</div>
 	<div id="corpo" align="center">
 		<hr>

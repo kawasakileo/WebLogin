@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Login Inválido</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Login InvÃ¡lido</title>
 <!-- link com o CSS -->
-<link rel="stylesheet" href="css/estilos.css"> 
+<link rel="stylesheet" href="css/style.css"> 
 </head>
 <body>
 	<div id="cabecalho" align="center">
@@ -21,7 +21,7 @@
 </body>
 <footer>
 	<div class="footer" align="center">
-		<p> © Copyright <strong>Leonardo Kawasaki</strong>. Todos os direitos reservados.</p>
+		<p> Â© Copyright <strong>Leonardo Kawasaki</strong>. Todos os direitos reservados.</p>
 	</div>
 </footer>
 </html>

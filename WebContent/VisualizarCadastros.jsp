@@ -1,14 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- script JS -->
-<script type="text/javascript" src="js/validarPessoa.js"> </script>
+<script type="text/javascript" src="js/esconderBotao.js"> </script>
 <!-- link com o CSS -->
 <link rel="stylesheet" href="css/style.css"> 
-<title>Cadastrar</title>
+<title>Cadastros</title>
 </head>
 <body>
 	<div id="cabecalho" align="center">
@@ -28,30 +29,12 @@
 		<a href="Contato.jsp">Contato</a>
 	</div>
 	<div id="corpo" align="center">
-		<h3>Cadastrar pessoa:</h3>
-		<form action="CadastroPessoa" method="post" name="formPessoa">
+		<h3>Visualizar cadastros:</h3>
+		<form action="VisualizaPessoas" method="post" name="formVisualizaPessoa">
 			<table>
 				<tr>
-					<td>Nome:</td>
-					<td><input type="text" name="textNome" required></td>
-				</tr>
-				<tr>
-					<td>Sobrenome:</td>
-					<td><input type="text" name="textSobrenome" required></td>
-				</tr>
-				<tr>
-					<td>CPF:</td>
-					<td><input type="text" name="textCpf" required></td>
-				</tr>
-				<tr>
-					<td>CEP:</td>
-					<td><input type="text" name="textCep" required></td>
-				</tr>
-				<tr>
 					<td colspan="2" align="right">
-						<button id="limparPessoa" class="button" type="reset">Limpar</button>
-						<button id="cadastrarPessoa" class="button" type="submit">Cadastrar</button>
-						<!-- <button id="cadastrarPessoa" class="button" type="submit" onclick="validaPessoa()">Cadastrar</button> -->
+						<button id="visualizarCadastros" class="button" type="submit">Visualizar</button>
 					</td>
 				</tr>
 			</table>

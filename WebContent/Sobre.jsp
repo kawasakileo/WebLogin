@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- link com o CSS -->
-<link rel="stylesheet" href="css/estilos.css"> 
+<link rel="stylesheet" href="css/style.css"> 
 <title>Sobre</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
 			<button class="dropbtn">Realizar Cadastros <i class="fa fa-caret-down"></i></button>
 			<div class="dropdown-content">
 				<a href="CadastroPessoa.jsp">Cadastrar Pessoa</a> 
-				<a href="PessoasCadastradas.jsp">Pessoas Cadastradas</a> 
+				<a href="VisualizarCadastros.jsp">Pessoas Cadastradas</a> 
 			</div>
 		</div> 
 		<a href="Sobre.jsp">Sobre</a>
@@ -31,7 +31,7 @@
 </body>
 <footer>
 	<div class="footer" align="center">
-		<p> © Copyright <strong>Leonardo Kawasaki</strong>. Todos os direitos reservados.</p>
+		<p> Â© Copyright <strong>Leonardo Kawasaki</strong>. Todos os direitos reservados.</p>
 	</div>
 </footer>
 </html>
