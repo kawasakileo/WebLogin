@@ -7,7 +7,7 @@
 <!-- script JS -->
 <script type="text/javascript" src="js/validarLogin.js"> </script>
 <!-- link com o CSS -->
-<link rel="stylesheet" href="css/style.css"> 
+<link rel="stylesheet" href="./css/estilos.css">
 <title>Login</title>
 </head>
 <body>

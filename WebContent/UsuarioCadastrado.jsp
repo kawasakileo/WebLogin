@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- link com o CSS -->
-<link rel="stylesheet" href="css/style.css"> 
+<link rel="stylesheet" href="./css/estilos.css">
 <title>Usuário Cadastrado</title>
 </head>
 <body>

@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- link com o CSS -->
-<link rel="stylesheet" href="css/style.css"> 
+<link rel="stylesheet" href="./css/estilos.css">
 <title>Menu Inicial</title>
 </head>
 <body>
@@ -16,10 +16,10 @@
 	<div class="navbar">
 		<a href="MenuInicial.jsp">Home</a>
 		<div class="dropdown">
-			<button class="dropbtn">Realizar Cadastros <i class="fa fa-caret-down"></i></button>
+			<button class="dropbtn">Cadastros<i class="fa fa-caret-down"></i></button>
 			<div class="dropdown-content">
-				<a href="CadastroPessoa.jsp">Cadastrar Pessoa</a> 
-				<a href="VisualizarCadastros.jsp">Pessoas Cadastradas</a> 
+				<a href="CadastroPessoa.jsp">Cadastrar</a> 
+				<a href="VisualizarCadastros.jsp">Visualizar</a> 
 			</div>
 		</div> 
 		<a href="Sobre.jsp">Sobre</a>

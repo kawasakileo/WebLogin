@@ -6,8 +6,29 @@
 <head>
 <meta charset="utf-8">
 <!-- link com o CSS -->
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="./css/estilos.css">
 <style>
+<style>
+a {
+	font-family: sans-serif;
+	font-size: 15px;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+	text-decoration: underline;
+}
 </style>
 <title>Cadastros</title>
 </head>
@@ -19,25 +40,27 @@
 	<div class="navbar">
 		<a href="MenuInicial.jsp">Home</a>
 		<div class="dropdown">
-			<button class="dropbtn">Realizar Cadastros <i class="fa fa-caret-down"></i></button>
+			<button class="dropbtn">Cadastros<i class="fa fa-caret-down"></i></button>
 			<div class="dropdown-content">
-				<a href="CadastroPessoa.jsp">Cadastrar Pessoa</a> 
-				<a href="VisualizarCadastros.jsp">Pessoas Cadastradas</a> 
+				<a href="CadastroPessoa.jsp">Cadastrar</a> 
+				<a href="VisualizarCadastros.jsp">Visualizar</a> 
 			</div>
 		</div> 
 		<a href="Sobre.jsp">Sobre</a>
 		<a href="Contato.jsp">Contato</a>
 	</div>
 	<div id="corpo" align="center" style="overflow:auto">
-		<h3>Visualizar cadastros:</h3>
+		<h3>Pessoas cadastradas:</h3>
 		<form action="VisualizaPessoas" method="post" name="formVisualizaPessoa">
-			<table>
+			<table class="table">
 				<tr>
 					<th>ID</th>
 					<th>Nome</th>
 					<th>Sobrenome</th>
 					<th>CPF</th>
 					<th>CEP</th>
+					<th></th>
+					<th></th>
 				</tr>
 				<c:forEach items="${pessoas}" var="pessoas">
 					<tr>
@@ -46,6 +69,8 @@
 						<td><c:out value="${pessoas.getSobrenome()}" /></td>
 						<td><c:out value="${pessoas.getCpf()}" /></td>
 						<td><c:out value="${pessoas.getCep()}" /></td>
+						<td><a href="EditarCadastro.jsp">Editar</a></td>
+						<td><a href="">Excluir</a></td>
 					</tr>
 				</c:forEach>
 			</table>

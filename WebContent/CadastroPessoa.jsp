@@ -1,13 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="ISO-8859-1">
 <!-- script JS -->
 <script type="text/javascript" src="js/validarPessoa.js"> </script>
 <!-- link com o CSS -->
-<link rel="stylesheet" href="css/style.css"> 
+<link rel="stylesheet" href="./css/estilos.css">
 <title>Cadastrar</title>
 </head>
 <body>
@@ -18,17 +18,17 @@
 	<div class="navbar">
 		<a href="MenuInicial.jsp">Home</a>
 		<div class="dropdown">
-			<button class="dropbtn">Realizar Cadastros <i class="fa fa-caret-down"></i></button>
+			<button class="dropbtn">Cadastros<i class="fa fa-caret-down"></i></button>
 			<div class="dropdown-content">
-				<a href="CadastroPessoa.jsp">Cadastrar Pessoa</a> 
-				<a href="VisualizarCadastros.jsp">Pessoas Cadastradas</a> 
+				<a href="CadastroPessoa.jsp">Cadastrar</a> 
+				<a href="VisualizarCadastros.jsp">Visualizar</a> 
 			</div>
 		</div> 
 		<a href="Sobre.jsp">Sobre</a>
 		<a href="Contato.jsp">Contato</a>
 	</div>
 	<div id="corpo" align="center">
-		<h3>Cadastrar pessoa:</h3>
+		<h3>Cadastre uma pessoa:</h3>
 		<form action="CadastroPessoa" method="post" name="formPessoa">
 			<table>
 				<tr>
@@ -60,7 +60,7 @@
 </body>
 <footer>
 	<div class="footer" align="center">
-		<p> Â© Copyright <strong>Leonardo Kawasaki</strong>. Todos os direitos reservados.</p>
+		<p> © Copyright <strong>Leonardo Kawasaki</strong>. Todos os direitos reservados.</p>
 	</div>
 </footer>
 </html>

@@ -8,7 +8,7 @@
 <!-- script JS -->
 <script type="text/javascript" src="js/esconderBotao.js"> </script>
 <!-- link com o CSS -->
-<link rel="stylesheet" href="css/style.css"> 
+<link rel="stylesheet" href="./css/estilos.css">
 <title>Cadastros</title>
 </head>
 <body>
@@ -19,10 +19,10 @@
 	<div class="navbar">
 		<a href="MenuInicial.jsp">Home</a>
 		<div class="dropdown">
-			<button class="dropbtn">Realizar Cadastros <i class="fa fa-caret-down"></i></button>
+			<button class="dropbtn">Cadastros<i class="fa fa-caret-down"></i></button>
 			<div class="dropdown-content">
-				<a href="CadastroPessoa.jsp">Cadastrar Pessoa</a> 
-				<a href="VisualizarCadastros.jsp">Pessoas Cadastradas</a> 
+				<a href="CadastroPessoa.jsp">Cadastrar</a> 
+				<a href="VisualizarCadastros.jsp">Visualizar</a> 
 			</div>
 		</div> 
 		<a href="Sobre.jsp">Sobre</a>

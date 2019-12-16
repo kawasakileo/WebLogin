@@ -7,7 +7,7 @@
 <!-- script JS -->
 <script type="text/javascript" src="js/validarCadastro.js"> </script>
 <!-- link com o CSS -->
-<link rel="stylesheet" href="css/style.css"> 
+<link rel="stylesheet" href="./css/estilos.css">
 <title>Cadastro de Usuário</title>
 </head>
 <body>

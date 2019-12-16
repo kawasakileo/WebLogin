@@ -5,7 +5,29 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- link com o CSS -->
-<link rel="stylesheet" href="css/style.css"> 
+<link rel="stylesheet" href="./css/estilos.css">
+<style>
+a {
+	font-family: sans-serif;
+	font-size: 15px;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+	text-decoration: underline;
+}
+</style>
 <title>Pessoa Cadastrada</title>
 </head>
 <body>
@@ -16,10 +38,10 @@
 	<div class="navbar">
 		<a href="MenuInicial.jsp">Home</a>
 		<div class="dropdown">
-			<button class="dropbtn">Realizar Cadastros <i class="fa fa-caret-down"></i></button>
+			<button class="dropbtn">Cadastros<i class="fa fa-caret-down"></i></button>
 			<div class="dropdown-content">
-				<a href="CadastroPessoa.jsp">Cadastrar Pessoa</a> 
-				<a href="VisualizarCadastros.jsp">Pessoas Cadastradas</a> 
+				<a href="CadastroPessoa.jsp">Cadastrar</a> 
+				<a href="VisualizarCadastros.jsp">Visualizar</a> 
 			</div>
 		</div> 
 		<a href="Sobre.jsp">Sobre</a>
@@ -28,7 +50,11 @@
 	<div id="corpo" align="center">	
 		<form>
 			<h1>Cadastrado efetuado com sucesso.</h1>
-			<a href="CadastroPessoa.jsp">Voltar</a>
+		</form>
+		<form>
+			<a href="CadastroPessoa.jsp">Novo Cadastro</a>
+			<br>
+			<a href="MenuInicial.jsp">Voltar</a>
 		</form>
 	</div>
 </body>
