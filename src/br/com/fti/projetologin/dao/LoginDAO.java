@@ -44,15 +44,15 @@ public class LoginDAO {
 		ps.close();
 		conn.close();
 	}
-		
-	public boolean selecionar(String usuario, String senha) throws SQLException, ClassNotFoundException {
+				
+	public boolean selecionar(Login login) throws SQLException, ClassNotFoundException {
 		String sql = "select * from login where usuario like ? and senha like ?";
 		boolean aux = false;
 
 		conn = CriarConexao.getConexao();
 		PreparedStatement ps = conn.prepareStatement(sql);
-		ps.setString(1, "%" + usuario + "%");
-		ps.setString(2, "%" + senha + "%");
+		ps.setString(1, login.getUsuario());
+		ps.setString(2, login.getSenha());
 		ResultSet rs = ps.executeQuery();
 			
 		if (rs.next()) {

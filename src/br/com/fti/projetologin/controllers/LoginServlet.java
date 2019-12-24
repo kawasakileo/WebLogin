@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import br.com.fti.projetologin.dao.LoginDAO;
+import br.com.fti.projetologin.models.Login;
 
 /**
  * Classe para a implementação do Servlet para a validação de logins.
@@ -32,23 +33,23 @@ public class LoginServlet extends HttpServlet {
         
 	private void validaDadosRecebidos(HttpServletRequest request, HttpServletResponse response) throws ServletException, 
     																   IOException, SQLException, ClassNotFoundException {
-    	LoginDAO loginDao = new LoginDAO();
-    	
-    	String nomeUsuario = request.getParameter("textUsuario");
-		String senhaUsuario = request.getParameter("textSenha");
+		LoginDAO loginDao = new LoginDAO();
+		Login login = new Login();
 			
-		// primeiro if não é executado, pois os campos do formulário estão como "required".
-		if((nomeUsuario.equals("") || senhaUsuario.equals("")) || 
-		  (!nomeUsuario.equals("") && senhaUsuario.equals("")) ||
-		  (nomeUsuario.equals("") && !senhaUsuario.equals(""))) {
-			RequestDispatcher rd = request.getRequestDispatcher("ErroCamposVaziosLogin.jsp");
+		String nomeUsuario = request.getParameter("textUsuario");
+		String senhaUsuario = request.getParameter("textSenha");
+
+		login.setUsuario(nomeUsuario);
+		login.setSenha(senhaUsuario);
+		
+		boolean queryDao = loginDao.selecionar(login);
+		
+		if (queryDao == false) {
+			RequestDispatcher rd = request.getRequestDispatcher("ErroUsuarioOuSenha.jsp");
 			rd.forward(request, response);
-		} else if(!loginDao.selecionar(nomeUsuario, senhaUsuario)) {
-    		RequestDispatcher rd = request.getRequestDispatcher("ErroUsuarioOuSenha.jsp");
-			rd.forward(request, response);
-		} else if(loginDao.selecionar(nomeUsuario, senhaUsuario)) {
+		} else {
 			RequestDispatcher rd = request.getRequestDispatcher("MenuInicial.jsp");
-	    	rd.forward(request, response);
+			rd.forward(request, response);
 		}
 	}
 }

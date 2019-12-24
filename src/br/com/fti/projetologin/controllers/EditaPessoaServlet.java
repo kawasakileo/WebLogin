@@ -28,19 +28,13 @@ public class EditaPessoaServlet extends HttpServlet {
     }
     
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		boolean aux = false;
 		try {
 			validaDadosRecebidos(request, response);
-			aux = true;
 		} catch (Exception e) {
 			e.printStackTrace();
-			aux = false;
-		} finally {
-			if(!aux) {
-				RequestDispatcher rd = request.getRequestDispatcher("ErroCpfJaCadastradoEdicao.jsp");
-				rd.forward(request, response);
-			}
-		}
+			RequestDispatcher rd = request.getRequestDispatcher("ErroEdicao.jsp");
+			rd.forward(request, response);
+		} 
 	}
 	
 	private void validaDadosRecebidos(HttpServletRequest request, HttpServletResponse response) throws ServletException, 

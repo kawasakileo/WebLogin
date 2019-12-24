@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div id="cabecalho" align="center">
-		<p>Erro: CPF já cadastrado.</p>
+		<p>Erro: Novos dados são inválidos.</p>
 	</div>
 	<div id="corpo" align="center">
 		<hr>
