@@ -25,7 +25,7 @@ public class VisualizaPessoaServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PessoaDAO pessoaDAO = new PessoaDAO();
 		try {
-			ArrayList<Pessoa> pessoas = pessoaDAO.selecionarPessoas();
+			ArrayList<Pessoa> pessoas = pessoaDAO.selecionarPessoasList();
 			request.setAttribute("pessoas", pessoas);
 			request.getRequestDispatcher("PessoasCadastradas.jsp").forward(request, response);
 		} catch (Exception e) {

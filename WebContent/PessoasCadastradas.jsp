@@ -8,7 +8,6 @@
 <!-- link com o CSS -->
 <link rel="stylesheet" href="./css/estilos.css">
 <style>
-<style>
 a {
 	font-family: sans-serif;
 	font-size: 15px;
@@ -59,8 +58,7 @@ a:active {
 					<th>Sobrenome</th>
 					<th>CPF</th>
 					<th>CEP</th>
-					<th></th>
-					<th></th>
+					<th>Ações</th>
 				</tr>
 				<c:forEach items="${pessoas}" var="pessoas">
 					<tr>
@@ -69,8 +67,8 @@ a:active {
 						<td><c:out value="${pessoas.getSobrenome()}" /></td>
 						<td><c:out value="${pessoas.getCpf()}" /></td>
 						<td><c:out value="${pessoas.getCep()}" /></td>
-						<td><a href="EditarCadastro.jsp">Editar</a></td>
-						<td><a href="">Excluir</a></td>
+						<td><a href="EditarCadastro.jsp?id=${pessoas.getId()}">Editar</a> |
+							<a href="">Excluir</a></td>
 					</tr>
 				</c:forEach>
 			</table>

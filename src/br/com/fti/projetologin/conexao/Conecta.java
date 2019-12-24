@@ -18,7 +18,7 @@ public class Conecta {
 		Connection conn = CriarConexao.getConexao();
 		
 		PessoaDAO pessoaDao = new PessoaDAO(conn);
-		pessoaDao.apagarTodos();		
+		pessoaDao.selecionarPessoasPorId(39);		
 		conn.close();
 	} 
 }

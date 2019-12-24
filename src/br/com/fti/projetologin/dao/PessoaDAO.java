@@ -58,8 +58,8 @@ public class PessoaDAO {
 		ps.setString(2, "%" + pessoa.getSobrenome() + "%");
 		ps.setString(3, "%" + pessoa.getCpf() + "%");
 		ps.setString(4, "%" + pessoa.getCep() + "%");
+
 		ResultSet rs = ps.executeQuery();
-			
 		if (rs.next()) {
 			aux = true;
 		}
@@ -69,13 +69,42 @@ public class PessoaDAO {
 		return aux;
 	}
 	
-	public ArrayList<Pessoa> selecionarPessoas() throws ClassNotFoundException, SQLException {
+	public Pessoa selecionarPessoasPorId(int id) throws ClassNotFoundException, SQLException {
+		String sql = "select * from pessoa where id like ?";
+		Pessoa pessoa = null;
+
+		conn = CriarConexao.getConexao();
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ps.setString(1, "%" + id + "%");
+		ResultSet rs = ps.executeQuery();
+
+		if (rs.next()) {
+			String nome = rs.getString("nome");
+			String sobrenome = rs.getString("sobrenome");
+			String cpf = rs.getString("cpf");
+			String cep = rs.getString("cep");
+			
+			pessoa = new Pessoa(id, nome, sobrenome, cpf, cep);
+			// System.out.println(id);
+			// System.out.println(nome);
+			// System.out.println(sobrenome);
+			// System.out.println(cpf);
+			// System.out.println(cep);
+		}
+		rs.close();
+		ps.close();
+
+		return pessoa;
+	}
+	
+	public ArrayList<Pessoa> selecionarPessoasList() throws ClassNotFoundException, SQLException {
 		String sql = "select * from pessoa";
 		ArrayList<Pessoa> pessoas = new ArrayList<Pessoa>();
 
 		conn = CriarConexao.getConexao();
 		PreparedStatement ps = conn.prepareStatement(sql);
 		ResultSet rs = ps.executeQuery();
+		
 		while (rs.next()) {
 			Pessoa pessoa = new Pessoa();
 			pessoa.setId(rs.getInt("id"));
@@ -86,5 +115,29 @@ public class PessoaDAO {
 			pessoas.add(pessoa);
 		}
 		return pessoas;
+	}
+	
+	public void editarPessoa(Pessoa pessoa) throws SQLException, ClassNotFoundException {
+		String sql = "update pessoa set nome = ?, sobrenome = ?, cpf = ?, cep = ? where id = ?";
+		
+		conn = CriarConexao.getConexao();
+		PreparedStatement ps = conn.prepareStatement(sql);
+		
+		ps.setString(1, pessoa.getNome());
+		ps.setString(2, pessoa.getSobrenome());
+		ps.setString(3, pessoa.getCpf());
+		ps.setString(4, pessoa.getCep());
+		ps.setInt(5, pessoa.getId());
+		
+		System.out.println(pessoa.getId());
+		System.out.println(pessoa.getNome());
+		System.out.println(pessoa.getSobrenome());
+		System.out.println(pessoa.getCpf());
+		System.out.println(pessoa.getCep());
+		System.out.println();
+		
+		ps.executeUpdate();
+		ps.close();
+		conn.close();
 	}
 }
