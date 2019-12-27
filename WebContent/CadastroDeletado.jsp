@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<head>
 <meta charset="ISO-8859-1">
 <!-- link com o CSS -->
 <link rel="stylesheet" href="./css/estilos.css">
@@ -28,14 +29,14 @@ a:active {
 	text-decoration: underline;
 }
 </style>
-<title>Pessoa Cadastrada</title>
+<title>Cadastro Deletado</title>
 </head>
 <body>
 	<div id="cabecalho" align="center">
 		<img alt="fti" src="./images/fti.png" width="150" height="90">
 		<hr>
 	</div>
-		<form action="VisualizaPessoas" method="post">
+	<form action="VisualizaPessoas" method="post">
 		<div class="navbar">
 			<a href="MenuInicial.jsp">Home</a>
 			<div class="dropdown">
@@ -50,7 +51,7 @@ a:active {
 	</form>
 	<div id="corpo" align="center">	
 		<form>
-			<h1>Cadastrado atualizado com sucesso.</h1>
+			<h1>Cadastrado deletado com sucesso.</h1>
 		</form>
 		<form>
 			<a href="MenuInicial.jsp">Voltar</a>

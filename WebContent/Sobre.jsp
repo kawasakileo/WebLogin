@@ -21,18 +21,19 @@
 		<img alt="fti" src="./images/fti.png" width="150" height="90">
 		<hr>
 	</div>
-	<div class="navbar">
-		<a href="MenuInicial.jsp">Home</a>
-		<div class="dropdown">
-			<button class="dropbtn">Cadastros<i class="fa fa-caret-down"></i></button>
-			<div class="dropdown-content">
-				<a href="CadastroPessoa.jsp">Cadastrar</a> 
-				<a href="VisualizarCadastros.jsp">Visualizar</a> 
+		<form action="VisualizaPessoas" method="post">
+		<div class="navbar">
+			<a href="MenuInicial.jsp">Home</a>
+			<div class="dropdown">
+				<button style="cursor: pointer" class="dropbtn">Cadastros<i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-content">
+					<a href="CadastroPessoa.jsp">Cadastrar</a> 
+				</div>
 			</div>
-		</div> 
-		<a href="Sobre.jsp">Sobre</a>
-		<a href="Contato.jsp">Contato</a>
-	</div>
+			<a href="Sobre.jsp">Sobre</a> 
+			<a href="Contato.jsp">Contato</a>
+		</div>
+	</form>
 	<div id="corpo" align="center">
 		<h1 align="center">WebLogin</h1>
 			<p>Projeto de um sistema web de cadastro e validações de login e cadastro de pessoas.</p>
