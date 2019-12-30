@@ -29,7 +29,7 @@
 	<div id="corpo" align="center">
 		<h1>Bem vindo!</h1>
 		<br>
-		<a href="Login.jsp" title=Sair>
+		<a href="../login/Login.jsp" title=Sair>
 			<img border="0" alt="Sair" src="../../resources/images/logout.png" width="30" height="30">
 		</a>	
 	</div>

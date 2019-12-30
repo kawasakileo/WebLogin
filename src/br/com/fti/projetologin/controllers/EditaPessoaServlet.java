@@ -57,7 +57,7 @@ public class EditaPessoaServlet extends HttpServlet {
 				pessoa.setCep(cep);
 
 				pessoaDao.editarPessoa(pessoa);
-
+				
 				RequestDispatcher rd = request.getRequestDispatcher("../respostas/PessoaEditada.jsp");
 				rd.forward(request, response);
 
