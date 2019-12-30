@@ -9,8 +9,8 @@ import br.com.fti.projetologin.models.Login;
 
 /**
  * Classe DAO (Data Access Object) para o objeto Login.
- * 
  * Dica: são nas classes DAO que são tratadas as queries SQL do banco de dados.
+ * 
  */
 public class LoginDAO {
 	private Connection conn;
@@ -22,7 +22,26 @@ public class LoginDAO {
 	public LoginDAO(Connection conn) {
 		this.conn = conn;
 	}
+	
+	public boolean selecionar(Login login) throws SQLException, ClassNotFoundException {
+		String sql = "select * from login where usuario like ? and senha like ?";
+		boolean aux = false;
+
+		conn = CriarConexao.getConexao();
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ps.setString(1, login.getUsuario());
+		ps.setString(2, login.getSenha());
+		ResultSet rs = ps.executeQuery();
+			
+		if (rs.next()) {
+			aux = true;
+		}
+		ps.close();
+		conn.close();
 		
+		return aux;
+	}
+	
 	public void adicionar(Login login) throws SQLException {	
 		String sql = "insert into login(usuario, senha) values (?, ?)";
 		
@@ -43,24 +62,5 @@ public class LoginDAO {
 		
 		ps.close();
 		conn.close();
-	}
-				
-	public boolean selecionar(Login login) throws SQLException, ClassNotFoundException {
-		String sql = "select * from login where usuario like ? and senha like ?";
-		boolean aux = false;
-
-		conn = CriarConexao.getConexao();
-		PreparedStatement ps = conn.prepareStatement(sql);
-		ps.setString(1, login.getUsuario());
-		ps.setString(2, login.getSenha());
-		ResultSet rs = ps.executeQuery();
-			
-		if (rs.next()) {
-			aux = true;
-		}
-		ps.close();
-		conn.close();
-		
-		return aux;
 	}
 }

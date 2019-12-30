@@ -14,7 +14,8 @@ import br.com.fti.projetologin.models.Pessoa;
  * Classe para a implementação do Servlet para a visualização das pessoas cadastradas.
  * 
  */
-@WebServlet("/VisualizaPessoas")
+@WebServlet(urlPatterns = { "/views/cadastros/VisualizaPessoas", "/views/menu/VisualizaPessoas",
+						"/views/respostas/VisualizaPessoas", "/views/erros/VisualizaPessoas" })
 public class VisualizaPessoaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -27,7 +28,7 @@ public class VisualizaPessoaServlet extends HttpServlet {
 		try {
 			ArrayList<Pessoa> pessoas = pessoaDAO.selecionarPessoasList();
 			request.setAttribute("pessoas", pessoas);
-			request.getRequestDispatcher("PessoasCadastradas.jsp").forward(request, response);
+			request.getRequestDispatcher("../cadastros/PessoasCadastradas.jsp").forward(request, response);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

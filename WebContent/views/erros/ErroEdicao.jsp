@@ -6,7 +6,19 @@
 <meta charset="ISO-8859-1">
 <title>Cadastro Inválido</title>
 <!-- link com o CSS -->
-<link rel="stylesheet" href="./css/estilos.css">
+<link rel="stylesheet" type="text/css" href="../../resources/css/estilos.css">
+<style>
+#button {
+	font-family: sans-serif;
+	font-size: 15px;
+  	background: none!important;
+  	border: none;
+  	padding: 0!important;
+  	color: #0000EE;
+	text-decoration: underline;
+  	cursor: pointer;
+}
+</style>
 </head>
 <body>
 	<div id="cabecalho" align="center">
@@ -14,9 +26,11 @@
 	</div>
 	<div id="corpo" align="center">
 		<hr>
-		<img alt="erro" src="./images/erro1.png" width="150" height="155">
+		<img alt="erro" src="../../resources/images/erro1.png" width="150" height="155">
 		<br></br>
-		<a href="VisualizarCadastros.jsp">Tentar novamente</a>
+		<form action="VisualizaPessoas" method="post">	
+			<button id="button">Tentar novamente</button>
+		</form>
 	</div>
 </body>
 <footer>

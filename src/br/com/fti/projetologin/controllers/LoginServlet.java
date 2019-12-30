@@ -2,7 +2,6 @@ package br.com.fti.projetologin.controllers;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +14,7 @@ import br.com.fti.projetologin.models.Login;
  * Classe para a implementação do Servlet para a validação de logins.
  * 
  */
-@WebServlet("/Login")
+@WebServlet("/views/login/Login")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -45,11 +44,9 @@ public class LoginServlet extends HttpServlet {
 		boolean queryDao = loginDao.selecionar(login);
 		
 		if (queryDao == false) {
-			RequestDispatcher rd = request.getRequestDispatcher("ErroUsuarioOuSenha.jsp");
-			rd.forward(request, response);
+			response.sendRedirect("../erros/ErroUsuarioOuSenha.jsp");
 		} else {
-			RequestDispatcher rd = request.getRequestDispatcher("MenuInicial.jsp");
-			rd.forward(request, response);
+			response.sendRedirect("../menu/MenuInicial.jsp");
 		}
 	}
 }

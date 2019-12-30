@@ -5,14 +5,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- script JS -->
-<script type="text/javascript" src="js/validarLogin.js"> </script>
+<script type="text/javascript" src="../../js/validarLogin.js"> </script>
 <!-- link com o CSS -->
-<link rel="stylesheet" href="./css/estilos.css">
+<link rel="stylesheet" type="text/css" href="../../resources/css/estilos.css">
 <title>Login</title>
 </head>
 <body>
 	<div id="cabecalho" align="center">
-		<img alt="fti" src="./images/fti.png" width="150" height="90">
+		<img alt="fti" src="../../resources/images/fti.png" width="150" height="90">
 		<hr>
 		<h1>Login</h1>
 	</div>
@@ -37,7 +37,7 @@
 		</form>
 		<form>
 			<p>Deseja cadastrar um usuário?</p>
-			<a href="CadastroLogin.jsp">Cadastrar usuário</a>
+			<a href="../cadastros/CadastroLogin.jsp">Cadastrar usuário</a>
 		</form>
 	</div>
 </body>

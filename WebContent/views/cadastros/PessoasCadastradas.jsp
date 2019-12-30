@@ -6,27 +6,27 @@
 <head>
 <meta charset="utf-8">
 <!-- script JS -->
-<script type="text/javascript" src="js/deletarCadastro.js"> </script>
+<script type="text/javascript" src="../../resources/js/deletarCadastro.js"> </script>
 <!-- link com o CSS -->
-<link rel="stylesheet" href="./css/estilos.css">
+<link rel="stylesheet" type="text/css" href="../../resources/css/estilos.css">
 <title>Cadastros</title>
 </head>
 <body>
 	<div id="cabecalho" align="center">
-		<img alt="fti" src="./images/fti.png" width="150" height="90">
+		<img alt="fti" src="../../resources/images/fti.png" width="150" height="90">
 		<hr>
 	</div>
 		<form action="VisualizaPessoas" method="post">
 		<div class="navbar">
-			<a href="MenuInicial.jsp">Home</a>
+			<a href="../menu/MenuInicial.jsp">Home</a>
 			<div class="dropdown">
 				<button style="cursor: pointer" class="dropbtn">Cadastros<i class="fa fa-caret-down"></i></button>
 				<div class="dropdown-content">
-					<a href="CadastroPessoa.jsp">Cadastrar</a> 
+					<a href="../cadastros/CadastroPessoa.jsp">Cadastrar</a> 
 				</div>
 			</div>
-			<a href="Sobre.jsp">Sobre</a> 
-			<a href="Contato.jsp">Contato</a>
+			<a href="../menu/Sobre.jsp">Sobre</a> 
+			<a href="../menu/Contato.jsp">Contato</a>
 		</div>
 	</form>
 	<div id="corpo" align="center" style="overflow: auto">
@@ -49,8 +49,8 @@
 						<td><c:out value="${pessoas.getSobrenome()}" /></td>
 						<td><c:out value="${pessoas.getCpf()}" /></td>
 						<td><c:out value="${pessoas.getCep()}" /></td>
-						<td><a href="EditarCadastro.jsp?id=${pessoas.getId()}">Editar</a></td>
-						<td><a href="DeletarCadastro.jsp?id=${pessoas.getId()}">Excluir</a></td>
+						<td><a href="../cadastros/EditarPessoa.jsp?id=${pessoas.getId()}">Editar</a></td>
+						<td><a href="../cadastros/DeletarPessoa.jsp?id=${pessoas.getId()}">Excluir</a></td>
 					</tr>
 				</c:forEach>
 			</table>

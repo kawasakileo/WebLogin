@@ -5,18 +5,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- link com o CSS -->
-<link rel="stylesheet" href="./css/estilos.css">
+<link rel="stylesheet" type="text/css" href="../../resources/css/estilos.css">
 <title>Usuário Cadastrado</title>
 </head>
 <body>
 	<div id="cabecalho" align="center">
-		<img alt="fti" src="./images/fti.png" width="150" height="90">
+		<img alt="fti" src="../../resources/images/fti.png" width="150" height="90">
 		<hr>
 		<h1>Cadastrado efetuado com sucesso.</h1>
 	</div>
 	<div id="corpo" align="center">	
 		<form>
-			<a href="Login.jsp">Voltar</a>
+			<a href="../login/Login.jsp">Voltar</a>
 		</form>
 	</div>
 </body>

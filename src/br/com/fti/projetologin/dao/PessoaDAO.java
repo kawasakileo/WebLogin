@@ -10,8 +10,8 @@ import br.com.fti.projetologin.models.Pessoa;
 
 /**
  * Classe DAO (Data Access Object) para o objeto Pessoa.
- * 
  * Dica: são nas classes DAO que são tratadas as queries SQL do banco de dados.
+ * 
  */
 public class PessoaDAO {
 	private Connection conn;
@@ -22,30 +22,6 @@ public class PessoaDAO {
 
 	public PessoaDAO(Connection conn) {
 		this.conn = conn;
-	}
-
-	public void adicionar(Pessoa pessoa) throws SQLException {	
-		String sql = "insert into pessoa(nome, sobrenome, cpf, cep) values (?, ?, ?, ?)";
-		
-		PreparedStatement ps = conn.prepareStatement(sql);
-		ps.setString(1, pessoa.getNome());
-		ps.setString(2, pessoa.getSobrenome());
-		ps.setString(3, pessoa.getCpf());
-		ps.setString(4, pessoa.getCep());	
-		ps.executeUpdate();		
-		
-		ps.close();
-		conn.close();
-	}
-	
-	public void apagarTodos() throws SQLException {
-		String sql = "delete from pessoa where id is not null";
-		
-		PreparedStatement ps = conn.prepareStatement(sql);
-		ps.execute();
-		
-		ps.close();
-		conn.close();
 	}
 	
 	public boolean selecionar(Pessoa pessoa) throws SQLException, ClassNotFoundException {
@@ -129,14 +105,54 @@ public class PessoaDAO {
 		ps.setString(4, pessoa.getCep());
 		ps.setInt(5, pessoa.getId());
 		
-		System.out.println(pessoa.getId());
-		System.out.println(pessoa.getNome());
-		System.out.println(pessoa.getSobrenome());
-		System.out.println(pessoa.getCpf());
-		System.out.println(pessoa.getCep());
-		System.out.println();
+		// System.out.println(pessoa.getId());
+		// System.out.println(pessoa.getNome());
+		// System.out.println(pessoa.getSobrenome());
+		// System.out.println(pessoa.getCpf());
+		// System.out.println(pessoa.getCep());
+		// System.out.println();
 		
 		ps.executeUpdate();
+		ps.close();
+		conn.close();
+	}
+
+	public void adicionar(Pessoa pessoa) throws SQLException {	
+		String sql = "insert into pessoa(nome, sobrenome, cpf, cep) values (?, ?, ?, ?)";
+		
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ps.setString(1, pessoa.getNome());
+		ps.setString(2, pessoa.getSobrenome());
+		ps.setString(3, pessoa.getCpf());
+		ps.setString(4, pessoa.getCep());	
+		ps.executeUpdate();		
+		
+		ps.close();
+		conn.close();
+	}
+	
+	public boolean existeId(int id) throws SQLException{
+		String sql = "select id from pessoa where id like ?";
+		boolean aux = false;
+		
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ps.setInt(1, id);
+		ResultSet rs = ps.executeQuery();
+		if(rs.next()) {
+			aux = true;
+		}
+		ps.close();
+		conn.close();
+		
+		return aux;
+	}
+	
+	public void apagarTodos() throws SQLException {
+		String sql = "delete from pessoa where id is not null";
+		
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ps.execute();
+		
 		ps.close();
 		conn.close();
 	}

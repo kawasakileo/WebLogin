@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Cadastro Inválido</title>
 <!-- link com o CSS -->
-<link rel="stylesheet" href="./css/estilos.css">
+<link rel="stylesheet" type="text/css" href="../../resources/css/estilos.css">
 </head>
 <body>
 	<div id="cabecalho" align="center">
@@ -14,9 +14,9 @@
 	</div>
 	<div id="corpo" align="center">
 		<hr>
-		<img alt="erro" src="./images/erro1.png" width="150" height="155">
+		<img alt="erro" src="../../resources/images/erro1.png" width="150" height="155">
 		<br></br>
-		<a href="CadastroPessoa.jsp">Tentar novamente</a>
+		<a href="../cadastros/CadastroPessoa.jsp">Tentar novamente</a>
 	</div>
 </body>
 <footer>

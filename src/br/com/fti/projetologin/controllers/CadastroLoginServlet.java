@@ -17,7 +17,7 @@ import br.com.fti.projetologin.models.Login;
  * Classe para a implementação do Servlet para o cadastro de logins.
  * 
  */
-@WebServlet("/CadastroLogin")
+@WebServlet("/views/cadastros/CadastroLogin")
 public class CadastroLoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -35,10 +35,10 @@ public class CadastroLoginServlet extends HttpServlet {
 			aux = false;
 		} finally {
 			if(aux) {
-				RequestDispatcher rd = request.getRequestDispatcher("UsuarioCadastrado.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("../respostas/UsuarioCadastrado.jsp");
 				rd.forward(request, response);
 			} else {
-				RequestDispatcher rd = request.getRequestDispatcher("ErroUsuarioJaCadastrado.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("../erros/ErroUsuarioJaCadastrado.jsp");
 				rd.forward(request, response);
 			}
  		}
@@ -57,7 +57,7 @@ public class CadastroLoginServlet extends HttpServlet {
 			login.setUsuario(nomeUsuario);
 			login.setSenha(senhaUsuario);
 		} else {
-			RequestDispatcher rd = request.getRequestDispatcher("ErroCamposVaziosCadastroLogin.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("../views/erros/ErroCamposVaziosCadastroLogin.jsp");
 			rd.forward(request, response);
 		}
 		LoginDAO dao = new LoginDAO(conn);

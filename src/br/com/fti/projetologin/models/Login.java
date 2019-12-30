@@ -1,7 +1,7 @@
 package br.com.fti.projetologin.models;
 
 /**
- * Classe padrão para o objeto Login.
+ * Classe modelo para o objeto Login.
  * 
  */
 public class Login {
