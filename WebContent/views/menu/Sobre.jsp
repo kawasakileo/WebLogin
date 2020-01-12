@@ -38,9 +38,9 @@
 		<h1 align="center">WebLogin</h1>
 			<p>Projeto de um sistema web de cadastro e validações de login e cadastro de pessoas.</p>
 		<h2 align="center">Tecnologias Utilizadas</h2>
-			<p>Para a construção deste sistema foram utilizadas as tecnologias como JavaEE, JSP, 
-			JavaScript, CSS, MySql e o Apache Tomcat. Também foram utilizados o MySql Workbench a versão EE do 
-			Eclipse IDE.</p>
+			<p>Para a construção deste sistema foram utilizadas as tecnologias como JavaEE, 
+			JavaScript, CSS, MySql e o Apache Tomcat. Também foram utilizadas as ferramentas 
+			MySql Workbench e a versão EE do Eclipse.</p>
 		<h2 align="center">Utilização</h2> 
 			<p>É necessário possuir uma versão Java JDK 1.8 ou superior. Ao utilizar este código fonte 
 			também é recomendado importá-lo para um projeto EE do Eclipse.</p>

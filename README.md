@@ -4,9 +4,9 @@ Projeto de um sistema web de cadastro e validações de login e cadastro de pessoa
 
 ## Tecnologias Utilizadas
 
-Para a construção deste sistema foram utilizadas as tecnologias como JavaEE, JSP, 
-JavaScript, CSS, MySql e o Apache Tomcat. Também foram utilizados o MySql Workbench a versão EE do 
-Eclipse IDE.
+Para a construção deste sistema foram utilizadas as tecnologias como JavaEE, 
+JavaScript, CSS, MySql e o Apache Tomcat. Também foram utilizadas as ferramentas 
+MySql Workbench e a versão EE do Eclipse.
 
 ## Utilização
 
